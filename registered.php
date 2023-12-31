@@ -61,6 +61,20 @@ mysqli_close($connection);
             background-color: #2c3e50;
             /* Slightly darker than the background color for even rows */
         }
+
+        /* a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #2980b9;
+        } */
     </style>
 </head>
 
@@ -118,6 +132,9 @@ mysqli_close($connection);
                 ?>
             </tbody>
         </table>
+        <a href="generate_pdf.php" class="btn btn-primary" target="_blank" download="student_list.pdf">
+            Download Student List (PDF)
+        </a>
     </div>
 
 </body>
