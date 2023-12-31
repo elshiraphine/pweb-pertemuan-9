@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
     <style>
         body {
-            background-color: #2c3e50; /* Hogwarts blue */
-            color: #ecf0f1; /* Light gray text */
+            background-color: #2c3e50;
+            /* Hogwarts blue */
+            color: #ecf0f1;
+            /* Light gray text */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -22,46 +24,57 @@
         h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #d35400; /* Pumpkin orange */
+            color: #d35400;
+            /* Pumpkin orange */
         }
 
         form {
-            background-color: #34495e; /* Dark gray for the form */
+            background-color: #34495e;
+            /* Dark gray for the form */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
         label {
-            color: #d35400; /* Pumpkin orange */
+            color: #d35400;
+            /* Pumpkin orange */
         }
 
         .btn-primary {
-            background-color: #d35400; /* Pumpkin orange */
+            background-color: #d35400;
+            /* Pumpkin orange */
             border-color: #d35400;
             margin-top: 15px;
         }
 
         .btn-primary:hover {
-            background-color: #a04000; /* Darker orange on hover */
+            background-color: #a04000;
+            /* Darker orange on hover */
             border-color: #a04000;
         }
 
         /* Customize dropdown */
         select.form-control {
-            background-color: #2c3e50; /* Hogwarts blue */
-            color: #ecf0f1; /* Light gray text */
+            background-color: #2c3e50;
+            /* Hogwarts blue */
+            color: #ecf0f1;
+            /* Light gray text */
         }
 
         /* Datepicker */
         .datepicker {
-            background-color: #2c3e50; /* Hogwarts blue */
-            color: #ecf0f1; /* Light gray text */
+            background-color: #2c3e50;
+            /* Hogwarts blue */
+            color: #ecf0f1;
+            /* Light gray text */
         }
 
         .datepicker-dropdown {
-            background-color: #34495e; /* Dark gray for the datepicker dropdown */
-            border: 1px solid #2c3e50; /* Hogwarts blue border */
+            background-color: #34495e;
+            /* Dark gray for the datepicker dropdown */
+            border: 1px solid #2c3e50;
+            /* Hogwarts blue border */
         }
     </style>
 </head>
@@ -70,10 +83,16 @@
 
     <div class="container">
         <h2>Hogwarts Admission Registration Form</h2>
-        <form action="process_registration.php" method="post">
+        <form action="process_registration.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="name">Full Name:</label>
                 <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <!-- Add this input field to your registration form -->
+            <div class="form-group">
+                <label for="photo">Upload Photo:</label>
+                <input type="file" class="form-control-file" id="photo" name="photo" accept="image/*">
             </div>
 
             <div class="form-group">
@@ -131,7 +150,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.datepicker').datepicker({
                 format: 'yyyy-mm-dd',
                 autoclose: true,
